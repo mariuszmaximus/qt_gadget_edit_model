@@ -37,8 +37,10 @@ bool GadgetDataModel::setData(const QModelIndex &index, const QVariant &value, i
     case Qt::DisplayRole:
     case Qt::EditRole:
         if (index.column() == 1) {
-            mGadgetMetaData.property(index.row()).writeOnGadget(mGadgetValue, value);
-            return true;
+            if (mGadgetMetaData.property(index.row()).writeOnGadget(mGadgetValue, value)) {
+                emit dataChanged(index, index, {Qt::DisplayRole, Qt::EditRole});
+                return true;
+            }
         }
     }
     return false;

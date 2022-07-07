@@ -35,6 +35,14 @@ namespace gadget {
 
     struct Baz {
         Q_GADGET
+
+        Q_PROPERTY(Priority priority MEMBER priority)
+
+    public:
+        enum Priority { High, Low, VeryHigh, VeryLow };
+        Q_ENUM(Priority)
+
+        Priority priority = High;
     };
 }
 
