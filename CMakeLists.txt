@@ -9,4 +9,5 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_subdirectory(GadgetEditor)
+add_subdirectory(gui_components)
 add_subdirectory(TestApp)
