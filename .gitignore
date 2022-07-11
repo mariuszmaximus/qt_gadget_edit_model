@@ -54,3 +54,5 @@ compile_commands.json
 # MacOS system files
 .DS_Store
 
+/tools
+/build
