@@ -35,7 +35,7 @@ else()
     endif()
 endif()
 
-target_link_libraries(TestApp PRIVATE Qt${QT_VERSION_MAJOR}::Widgets GadgetEditor)
+target_link_libraries(TestApp PRIVATE Qt${QT_VERSION_MAJOR}::Widgets GadgetEditor gui_components)
 
 message(PROJECT_VERSION ${PROJECT_VERSION})
 set_target_properties(TestApp PROPERTIES
@@ -43,7 +43,7 @@ set_target_properties(TestApp PROPERTIES
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
     MACOSX_BUNDLE TRUE
-    WIN32_EXECUTABLE TRUE
+    WIN32_EXECUTABLE FALSE
 )
 
 if(QT_VERSION_MAJOR EQUAL 6)

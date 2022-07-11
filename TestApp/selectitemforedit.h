@@ -15,7 +15,7 @@ namespace gadget {
         Q_GADGET
         Q_PROPERTY(int a MEMBER a)
         Q_PROPERTY(double x MEMBER x)
-
+    public:
         int a = 1;
         double x = 0.23;
     };
@@ -60,6 +60,8 @@ private slots:
     void on_testBarButton_clicked();
 
     void on_testBuzButton_clicked();
+
+    void on_testFooButto20_clicked();
 
 private:
     Ui::SelectItemForEdit *ui;
